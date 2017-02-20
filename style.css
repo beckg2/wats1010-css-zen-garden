@@ -8,187 +8,431 @@
 /* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
 
 
-/* basic elements */
-html {
-	margin: 0;
-	padding: 0;
-	}
-body { 
-	font: 75% georgia, sans-serif;
-	line-height: 1.88889;
-	color: #555753; 
-	background: #fff url(blossoms.jpg) no-repeat bottom right; 
-	margin: 0; 
-	padding: 0;
-	}
-p { 
-	margin-top: 0; 
-	text-align: justify;
-	}
-h3 { 
-	font: italic normal 1.4em georgia, sans-serif;
-	letter-spacing: 1px; 
-	margin-bottom: 0; 
-	color: #7D775C;
-	}
-a:link { 
-	font-weight: bold; 
-	text-decoration: none; 
-	color: #B7A5DF;
-	}
-a:visited { 
-	font-weight: bold; 
-	text-decoration: none; 
-	color: #D4CDDC;
-	}
-a:hover, a:focus, a:active { 
-	text-decoration: underline; 
-	color: #9685BA;
-	}
-abbr {
-	border-bottom: none;
-	}
+		body {
+			font-family: tahoma, arial, helvetica, sans-serif;
+			font-size: x-small;
+			font-size: small;
+			}
+		html>body {
+  		font-size: small;
+			}
 
+		.summary {
+			font-weight: bold;
+			font-size: .8em;
+			}
 
-/* specific divs */
-.page-wrapper { 
-	background: url(zen-bg.jpg) no-repeat top left; 
-	padding: 0 175px 0 110px;  
-	margin: 0; 
-	position: relative;
-	}
+		.summary p {
+			padding: 0 15px;
+			}
 
-.intro { 
-	min-width: 470px;
-	width: 100%;
-	}
+		abbr {
+			cursor: help;
+			}
 
-header h1 { 
-	background: transparent url(h1.gif) no-repeat top left;
-	margin-top: 10px;
-	display: block;
-	width: 219px;
-	height: 87px;
-	float: left;
+		a {
+			white-space: nowrap;
+			}
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-header h2 { 
-	background: transparent url(h2.gif) no-repeat top left; 
-	margin-top: 58px; 
-	margin-bottom: 40px; 
-	width: 200px; 
-	height: 18px; 
-	float: right;
+		a:link {
+			font-weight: bold;
+			text-decoration: none;
+			border: 1px solid #b76d12;
+			color: #b76d12;
+			padding: 0 1px;
+			}
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-header {
-	padding-top: 20px;
-	height: 87px;
-}
+		a:visited {
+			font-weight: bold;
+			text-decoration: none;
+			color: #621a6d;
+			}
 
-.summary {
-	clear: both; 
-	margin: 20px 20px 20px 10px; 
-	width: 160px; 
-	float: left;
-	}
-.summary p {
-	font: italic 1.1em/2.2 georgia; 
-	text-align: center;
-	}
+		a:hover {
+			border: 1px solid #ccd61d;
+			padding: 0 1px;
+			}
 
-.preamble {
-	clear: right; 
-	padding: 0px 10px 0 10px;
-	}
-.supporting {	
-	padding-left: 10px; 
-	margin-bottom: 40px;
-	}
+		a:active {
+			font-weight: bold;
+			text-decoration: none;
+			}
 
-footer { 
-	text-align: center; 
-	}
-footer a:link, footer a:visited { 
-	margin-right: 20px; 
-	}
+		body {
+			background: #F2F4EE url(tropical-sands.jpg) repeat fixed;
+			margin: 0;
+			padding: 0;
+			}
 
-.sidebar {
-	margin-left: 600px; 
-	position: absolute; 
-	top: 0; 
-	right: 0;
-	}
-.sidebar .wrapper { 
-	font: 10px verdana, sans-serif; 
-	background: transparent url(paper-bg.jpg) top left repeat-y; 
-	padding: 10px; 
-	margin-top: 150px; 
-	width: 130px; 
-	}
-.sidebar h3.select { 
-	background: transparent url(h3.gif) no-repeat top left; 
-	margin: 10px 0 5px 0; 
-	width: 97px; 
-	height: 16px; 
+		.page-wrapper {
+			position: relative;
+			top: 0;
+			left: 0;
+			margin: 0;
+			padding: 0;
+			}
+		
+		.intro {
+			position: relative;
+			top: 0;
+			left: 0;
+			margin: 0;
+			padding: 0;
+			z-index: 1000;
+			}
+	
+		header {
+			position: relative;
+			top: 0;
+			left: 0;
+			margin: 0;
+			padding: 0;
+			height: 126px;
+			width: 2100px;
+			}
+			
+		header h1 {       
+			margin: 0;
+			background: transparent url(header.jpg) no-repeat;;
+			height: 126px;
+			text-indent: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+			background-size: cover;
+			}
+				
+		header h2 {      
+			display: none;
+			}
+				
+		.summary {          
+			position: absolute;
+			top: 300px;
+			left: 0;
+			width: 352px;
+			padding-top: 0px;
+			z-index: 500;
+			}
+							
+		.preamble {               
+			position: absolute;
+			background: #42682a;
+			z-index: 1000;
+			width: 257px;    
+			top: 126px;
+			left: 370px;
+			padding: 0;
+			border: solid #998;    
+			border-width: 0px 1px 1px 1px; 
+			}
+			
+		html>head:first-child+body .preamble {         
+			border: 0;  
+			}
+			
+		.preamble h3 {
+			background: transparent url(title_preamble.jpg) no-repeat;
+			margin: 0;
+			padding: 0;
+			height: 86px;
+			text-indent: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+			}
+			
+		.preamble p {
+			margin: 0;
+			padding: 5px 20px; 
+			}	
+					
+		.supporting {
+			position: relative;
+			top: 0;
+			left: 0;
+			margin: 0;
+			padding: 0;
+			height: 301px;
+			width: 2100px; 
+			}
+		
+		.explanation, .participation, .benefits, .requirements {
+			border: solid #998; 
+			border-width: 0 1px 1px 1px;
+			background: #42682a;
+			position: absolute;
+			z-index: 1000;
+			width: 257px;
+			top: 0;
+			padding: 0;
+			}
+		
+		.explanation {
+			left: 680px;
+			}		
+		
+		.explanation h3, .participation h3, .benefits h3, .requirements h3 {
+			margin: 0;
+			padding: 0;
+			height: 86px; 
+			}
+		
+		.explanation h3 {
+			background: transparent url(title_about.jpg) no-repeat;
+			}
+			
+		.explanation h3, .participation h3, .requirements h3, .benefits h3 {
+			text-indent: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+			}	
+		
+		.explanation p, .participation p, .benefits p, .requirements p {
+			margin: 0;
+			padding: 5px 20px;
+			}
+			
+		.participation {
+			left: 980px;
+			}
+			
+		.participation h3 {
+			background: transparent url(title_participation.jpg) no-repeat;
+			}
+			
+		.benefits {
+			left: 1280px;
+			}
+			
+		.benefits h3 {
+			background: transparent url(title_benefits.jpg) no-repeat;
+			}
+			
+		.requirements {
+			left: 1580px;
+			}
+				
+		.requirements h3 {
+			background: transparent url(title_requirements.jpg) no-repeat;
+			}
+		
+		footer {
+			position: absolute;
+			top: 80px;
+			left: 50px;
+			margin: 0;
+			padding: 0;
+			}
+			
+		.sidebar a:link, .sidebar a:visited, .sidebar a:hover, .sidebar a:active {
+			border: 0;
+			padding: 0;
+			margin: 0;
+			}
+		
+		.sidebar .wrapper {
+			position: absolute;
+			top: 67px;
+			left: 750px;
+			z-index: 2000;
+			height: 150px;
+			margin: 0;
+			padding: 0;
+			width: 1350px;
+			}
+			
+		.sidebar .wrapper a {
+			border: 0;
+			}
+			
+		.sidebar .wrapper .design-selection li > a:first-child {
+			display: block;
+			}
+			
+		.sidebar .wrapper ul > li:last-child {
+			border-bottom: 0;
+			}
+		
+			
+		.sidebar .wrapper {
+			list-style-type: none;
+			font-size: .7em;
+			}	
+			
+		.sidebar .wrapper a {
+			white-space: normal;
+			}
+			
+		.sidebar .wrapper a:first-child {
+			font-size: 1.3em;
+			}
+			
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-.sidebar h3.archives { 
-	background: transparent url(h5.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:57px; 
-	height: 14px; 
+		.sidebar .wrapper li a:hover {
+			text-decoration: underline;
+			border: 0;
+			background: transparent;
+			}
+		
+		.sidebar .wrapper li {
+			padding: 0 3px;
+			border: 0;
+			}
+		
+		html > body .sidebar .wrapper li {
+			margin: 0;
+			padding: 3px;
+			border-bottom: 1px solid #887;
+			}
+			
+		.design-selection, .design-archives, .zen-resources {
+			float: left;
+			}
+			
+		.design-selection h3, #lfavorites h3, .design-archives h3, .zen-resources h3 {
+			padding-top: 25px;
+			float: left;
+			display: block;
+			height: 150px;
+			}
+			
+		.design-selection h3, .design-archives h3, .zen-resources h3 {
+			padding: 5px;
+			position: relative;
+			margin-bottom: 10px;
+			color: #776;
+			font-size: .5em;
+			border: 1px solid #776;
+			padding-right: 25px;
+			text-indent: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+			}
+			
+		.design-selection ul, .design-archives ul, .zen-resources ul {
+			float: left;
+			position: relative;
+			top: -45px;
+			z-index: 3000;
+			left: -15px;
+			}	
+			
+		html > body .design-selection h3 {
+			background: transparent url(drop_lselect.png) no-repeat;
+			height: 36px;
+			width: 123px;
+			padding-top: 0;
+			float: none;
+			text-indent: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+			border: none;
+			}
+				
+		html > body .design-selection ul {
+				display: none;
+				position: relative;
+				top: -5px;
+				left: 0;
+				}
+				
+		html > body .design-selection:hover ul {
+			float: none;
+			display: block;
+			background: url(drop_background.png) repeat;
+			border: 1px solid #776;
+			margin: 0 5px;
+			padding: 5px;
+			width: 128px;
+			list-style-type: none;
+			}
+				
+		html > body .design-selection li {
+			float: none;
+			}
+				
+		.design-selection ul {
+			list-style-type: none;
+			display: block;
+			}	
+					
+		html > body .design-archives h3 {
+			background: transparent url(drop_archives.png) no-repeat;
+			height: 36px;
+			width: 123px;
+			padding-top: 0;
+			float: none;
+			text-indent: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+			border: none;
+			}
+				
+		html > body .design-archives ul {
+			display: none;
+			position: relative;
+			top: -5px;
+			left: 0;
+			}
+				
+		html > body .design-archives:hover ul {
+			float: none;
+			display: block;
+			background: url(drop_background.png) repeat;
+			border: 1px solid #776;
+			margin: 5px;
+			padding: 5px;
+			width: 128px;
+			list-style-type: none;
+			}
+				
+		html > body .design-archives li {
+			float: none;
+			display: block;
+			}
+				
+		.design-archives ul {
+			list-style-type: none;
+			}
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-.sidebar h3.resources { 
-	background: transparent url(h6.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:63px; 
-	height: 10px; 
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-
-
-.sidebar ul {
-	margin: 0;
-	padding: 0;
-	}
-.sidebar li {
-	line-height: 1.3em; 
-	background: transparent url(cr1.gif) no-repeat top center; 
-	display: block; 
-	padding-top: 5px; 
-	margin-bottom: 5px;
-	list-style-type: none;
-	}
-.sidebar li a:link {
-	color: #988F5E;
-	}
-.sidebar li a:visited {
-	color: #B3AE94;
-	}
-
-
-.extra1 {
-	background: transparent url(cr2.gif) top left no-repeat; 
-	position: absolute; 
-	top: 40px; 
-	right: 0; 
-	width: 148px; 
-	height: 110px;
-	}
+		html > body .zen-resources h3 {
+			background: transparent url(drop_resources.png) no-repeat;
+			height: 36px;
+			width: 123px;
+			padding-top: 0;
+			float: none;
+			text-indent: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+			border: none;
+			}
+				
+		.zen-resources ul {
+			display: block;
+			}
+				
+		html > body .zen-resources ul {
+			display: none;
+			position: relative;
+			top: -5px;
+			left: 0;
+			}
+				
+		html > body .zen-resources:hover ul {
+			float: none;
+			display: block;
+			background: url(drop_background.png) repeat;
+			border: 1px solid #776;
+			margin: 5px;
+			padding: 5px;
+			width: 128px;
+			list-style-type: none;
+			}
+			
+		html > body .zen-resources li {
+			float: none;
+			}
+				
+		.zen-resources ul {
+			list-style-type: none;
+			}
+			
